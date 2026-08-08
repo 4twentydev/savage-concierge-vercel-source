@@ -1,0 +1,1 @@
+{"name":"savage-concierge","version":"0.2.0","private":true,"scripts":{"build":"next build","dev":"next dev","start":"next start"},"dependencies":{"next":"latest","react":"latest","react-dom":"latest"},"devDependencies":{"tailwindcss":"3.4.17","postcss":"8.4.49","autoprefixer":"10.4.20"}}

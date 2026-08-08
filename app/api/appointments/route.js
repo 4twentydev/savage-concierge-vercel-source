@@ -1,0 +1,3 @@
+import { NextResponse } from "next/server";
+const hasText=value=>typeof value==="string"&&value.trim().length>0;
+export async function POST(request){const payload=await request.json();if(!hasText(payload.name)||!hasText(payload.phone)||!hasText(payload.location)||!hasText(payload.date)||!hasText(payload.time)){return NextResponse.json({error:"Missing required appointment details."},{status:400})}const confirmationId=`SMD-${Date.now().toString(36).toUpperCase()}`;console.info("Savage Concierge appointment request",{confirmationId,payload});return NextResponse.json({ok:true,confirmationId,status:"Needs Review"})}
